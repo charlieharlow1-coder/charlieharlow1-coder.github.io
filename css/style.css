@@ -727,10 +727,13 @@ footer p {
 }
 
 .modal-logo {
-  height: 24px;
+  height: 28px;
   width: auto;
+  max-width: 140px;
   display: block;
-  opacity: 0.85;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
 }
 
 .modal-brand-desc {
@@ -1012,10 +1015,11 @@ footer p {
   .nav-links { gap: 16px; }
   .nav-links li:first-child { display: none; }
 
-  #hero { padding: 90px 20px 36px; }
+  #hero { padding: 90px 20px 24px; min-height: unset; }
   .hero-text h1 { font-size: 3rem; }
+  .hero-sub { display: none; }
 
-  #work { padding: 60px 20px; }
+  #work { padding: 40px 20px 60px; }
   .project-grid { grid-template-columns: 1fr; }
   .project-tile:nth-child(4) { grid-column: span 1; }
   .tile-wide { grid-column: span 1; }
