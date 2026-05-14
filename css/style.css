@@ -365,8 +365,13 @@ a {
 }
 
 .tile-wide .tile-image {
-  height: 100%;
-  min-height: 280px;
+  height: 280px;
+}
+
+.tile-wide .tile-image img {
+  object-fit: contain;
+  background: var(--cream);
+  padding: 24px;
 }
 
 .tile-info-wide {
