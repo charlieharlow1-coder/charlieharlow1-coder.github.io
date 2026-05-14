@@ -393,6 +393,86 @@ a {
 }
 
 /* ============================================================
+   RECOMMENDATIONS
+   ============================================================ */
+#recommendations {
+  padding: 100px 48px;
+  background: var(--white);
+}
+
+.rec-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.rec-scroll:active { cursor: grabbing; }
+
+.rec-scroll::-webkit-scrollbar { height: 3px; }
+.rec-scroll::-webkit-scrollbar-track { background: var(--cream-dark); }
+.rec-scroll::-webkit-scrollbar-thumb { background: var(--sage-mid); border-radius: 2px; }
+
+.rec-card {
+  flex: 0 0 360px;
+  background: var(--cream);
+  border-left: 4px solid var(--sage);
+  padding: 36px 32px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rec-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.07);
+}
+
+.rec-quote {
+  font-size: 0.92rem;
+  color: var(--mid);
+  line-height: 1.85;
+  font-style: italic;
+  flex: 1;
+}
+
+.rec-author {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 16px;
+  border-top: 1px solid var(--sage-light);
+}
+
+.rec-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.rec-role {
+  font-size: 0.72rem;
+  color: var(--sage-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.rec-hint {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--light);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+/* ============================================================
    ABOUT
    ============================================================ */
 #about {
@@ -756,17 +836,22 @@ footer p {
   scroll-snap-align: start;
 }
 
-/* TikTok / vertical video container — fixed size */
+/* TikTok / vertical video container
+   Renders iframe at TikTok's native 325px then scales to fit container
+   — prevents right-edge clipping */
 .tiktok-container {
-  width: 260px;
-  height: 460px;
+  width: 300px;
+  height: 533px;
   overflow: hidden;
   flex-shrink: 0;
+  position: relative;
 }
 
 .tiktok-container iframe {
-  width: 100%;
-  height: 100%;
+  width: 325px;
+  height: 578px;
+  transform: scale(0.923);
+  transform-origin: top left;
   border: none;
   display: block;
 }
