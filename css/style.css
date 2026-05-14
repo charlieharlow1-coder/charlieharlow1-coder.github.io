@@ -732,34 +732,43 @@ footer p {
 
 /* Video grid */
 .video-grid {
-  display: grid;
-  gap: 20px;
+  display: flex;
+  gap: 16px;
 }
 
+/* Vertical (TikTok) — horizontal scroll row */
 .video-grid.vertical {
-  grid-template-columns: repeat(3, 1fr);
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
+
+.video-grid.vertical::-webkit-scrollbar { height: 3px; }
+.video-grid.vertical::-webkit-scrollbar-track { background: var(--cream-dark); }
+.video-grid.vertical::-webkit-scrollbar-thumb { background: var(--sage-mid); border-radius: 2px; }
 
 .video-wrap {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
-/* TikTok / vertical video container */
+/* TikTok / vertical video container — fixed size */
 .tiktok-container {
-  width: 100%;
-  position: relative;
-  padding-top: 177.77%; /* 9:16 aspect ratio */
+  width: 260px;
+  height: 460px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .tiktok-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border: none;
+  display: block;
 }
 
 /* Wide horizontal YouTube video */

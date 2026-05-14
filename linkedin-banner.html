@@ -14,7 +14,6 @@
       width: 1584px;
       height: 396px;
       overflow: hidden;
-      background: #F8F5EE;
       font-family: 'DM Sans', sans-serif;
       -webkit-font-smoothing: antialiased;
     }
@@ -24,57 +23,53 @@
       height: 396px;
       position: relative;
       overflow: hidden;
-      /* Warm gradient matching portfolio hero */
-      background: radial-gradient(ellipse at 80% 50%, #F0E8D5 0%, #F8F5EE 60%);
+      background: radial-gradient(ellipse at 70% 40%, #EFE6D2 0%, #F8F5EE 55%);
     }
 
-    /* Left side — purely decorative, safe to be covered by profile pic */
-    .deco-circle-1 {
+    /*
+      SAFE ZONE GUIDE:
+      - Desktop: profile pic covers bottom-left ~330x330px area
+      - Mobile: shows CENTER ~950px, crops left + right edges, profile pic bottom-left
+      - SAFE BOX: x=500–1400, y=0–240 (top-center-right, above profile pic overlap)
+      All critical content sits within this safe box.
+    */
+
+    /* Purely decorative — left zone, safe to be covered on desktop */
+    .deco-left {
       position: absolute;
-      left: -60px;
+      left: -40px;
       top: 50%;
       transform: translateY(-50%);
-      width: 340px;
-      height: 340px;
+      width: 380px;
+      height: 380px;
       border-radius: 50%;
-      background: rgba(125, 155, 118, 0.08);
+      background: rgba(125, 155, 118, 0.07);
+      pointer-events: none;
     }
 
-    .deco-circle-2 {
-      position: absolute;
-      left: 80px;
-      bottom: -80px;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: rgba(125, 155, 118, 0.06);
-    }
-
-    /* Sage accent line — vertical, separating left deco from right content */
+    /* Thin sage vertical line — marks transition from deco to content */
     .divider {
       position: absolute;
-      left: 420px;
-      top: 60px;
-      bottom: 60px;
+      left: 500px;
+      top: 48px;
+      bottom: 48px;
       width: 1px;
-      background: rgba(125, 155, 118, 0.3);
+      background: rgba(125, 155, 118, 0.25);
     }
 
-    /* Right content — safe zone, well away from profile pic */
+    /* Main content — inside safe zone (x=540+, top half of banner) */
     .content {
       position: absolute;
-      left: 460px;
-      right: 80px;
+      left: 540px;
+      right: 100px;
       top: 0;
-      bottom: 0;
+      height: 280px; /* keep above profile-pic overlap zone */
       display: flex;
       align-items: center;
       gap: 80px;
     }
 
-    .main {
-      flex: 1;
-    }
+    .main { flex: 1; }
 
     .label {
       font-size: 11px;
@@ -82,45 +77,45 @@
       color: #7D9B76;
       text-transform: uppercase;
       letter-spacing: 0.25em;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 88px;
+      font-size: 92px;
       font-weight: 500;
-      line-height: 0.95;
+      line-height: 0.92;
       color: #1C1C1C;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       letter-spacing: -0.01em;
     }
 
     .tagline {
-      font-size: 15px;
+      font-size: 14px;
       color: #7A7A7A;
       font-style: italic;
-      line-height: 1.6;
-      max-width: 480px;
+      line-height: 1.65;
+      max-width: 460px;
       border-left: 2px solid #7D9B76;
       padding-left: 16px;
     }
 
-    /* Skills column on right */
+    /* Skills — right column */
     .skills {
-      width: 300px;
+      width: 280px;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
       gap: 0;
+      padding-top: 8px;
     }
 
     .skill {
-      padding: 11px 0;
-      border-bottom: 1px solid rgba(184, 204, 173, 0.5);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(184, 204, 173, 0.45);
       font-size: 12px;
-      font-weight: 400;
       color: #5A5A5A;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -130,22 +125,20 @@
 
     .skill::before {
       content: '';
-      display: inline-block;
-      width: 14px;
+      width: 12px;
       height: 1px;
       background: #7D9B76;
       flex-shrink: 0;
     }
 
-    /* Website URL bottom right */
+    /* URL — bottom right, inside safe zone */
     .url {
       position: absolute;
-      bottom: 24px;
-      right: 80px;
+      bottom: 28px;
+      right: 100px;
       font-size: 11px;
-      color: #B8CCAD;
+      color: #C2D4BC;
       letter-spacing: 0.1em;
-      font-weight: 400;
     }
 
   </style>
@@ -153,17 +146,16 @@
 <body>
   <div class="banner">
 
-    <!-- Left decorative elements (safe to be covered by profile pic) -->
-    <div class="deco-circle-1"></div>
-    <div class="deco-circle-2"></div>
+    <!-- Left decorative (covered by profile pic on desktop — intentional) -->
+    <div class="deco-left"></div>
     <div class="divider"></div>
 
-    <!-- Right content (safe zone) -->
+    <!-- Safe zone content -->
     <div class="content">
       <div class="main">
         <p class="label">Marketing Strategist</p>
         <h1>Charlie<br>Harlow</h1>
-        <p class="tagline">Creator &amp; creative strategy — building campaigns<br>that resonate culturally and perform commercially.</p>
+        <p class="tagline">Creator &amp; creative strategy — building<br>campaigns that resonate culturally<br>and perform commercially.</p>
       </div>
       <div class="skills">
         <div class="skill">Creator &amp; Influencer Strategy</div>
