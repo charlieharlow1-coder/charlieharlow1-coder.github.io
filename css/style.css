@@ -1015,4 +1015,10 @@ footer p {
 
   .recommendation { padding: 24px 20px; }
   .hero-scroll { display: none; }
+
+  /* Recommendations — full-width cards so one shows at a time */
+  #recommendations { padding: 60px 0; }
+  #recommendations .section-header { padding: 0 24px 32px; }
+  .rec-scroll { padding: 0 24px 20px; gap: 16px; }
+  .rec-card { flex: 0 0 calc(100vw - 48px); }
 }
