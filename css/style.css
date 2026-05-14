@@ -201,10 +201,12 @@ a {
 
 .hero-image img {
   width: 100%;
-  max-width: 440px;
+  max-width: 400px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: top center;
+  filter: grayscale(18%) brightness(1.02);
+  box-shadow: 0 0 0 6px var(--cream), 0 0 0 8px var(--sage-mid);
 }
 
 /* Scroll indicator */
