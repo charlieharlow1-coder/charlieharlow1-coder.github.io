@@ -171,8 +171,10 @@ a {
 }
 
 .hero-sub {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   margin-bottom: 40px;
   padding-left: 23px;
 }
@@ -1017,7 +1019,7 @@ footer p {
 
   #hero { padding: 90px 20px 24px; min-height: unset; }
   .hero-text h1 { font-size: 3rem; }
-  .hero-sub { display: none; }
+  .hero-sub { font-size: 0.8rem; text-align: center; padding-left: 0; color: var(--light); letter-spacing: 0.04em; }
 
   #work { padding: 40px 20px 60px; }
   .project-grid { grid-template-columns: 1fr; }
