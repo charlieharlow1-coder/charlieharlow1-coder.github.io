@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charlie Harlow — Marketing Strategist</title>
+  <meta name="description" content="Charlie Harlow — Marketing Strategist leading creator and creative strategy, building campaigns that resonate culturally and perform commercially.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">CH</a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-label">Marketing Strategist</p>
+        <h1>Charlie<br>Harlow</h1>
+        <p class="hero-tagline">"Creator campaigns perform best when creators are treated as creative partners, not content machines."</p>
+        <p class="hero-sub">Creator &amp; creative strategy across health, tech, and consumer brands.</p>
+        <a href="#work" class="hero-cta">View Selected Work</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/headshot.jpg" alt="Charlie Harlow">
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section id="work">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Selected Work</h2>
+        <p class="section-sub">Five years of creator-led campaigns, content strategy, and platform-native storytelling.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <!-- Tile 1: CoppaFeel! Feelings -->
+        <div class="project-tile" onclick="openModal('modal-1')" role="button" tabindex="0">
+          <div class="tile-image">
+            <img src="https://img.youtube.com/vi/xAa-BmsgHh4/maxresdefault.jpg"
+                 onerror="this.src='https://img.youtube.com/vi/xAa-BmsgHh4/hqdefault.jpg'"
+                 alt="CoppaFeel! Feelings Campaign">
+            <div class="tile-overlay"><span>View Project</span></div>
+          </div>
+          <div class="tile-info">
+            <span class="tile-brand">CoppaFeel!</span>
+            <h3 class="tile-title">Creator Programme — "Feelings" Campaign</h3>
+            <p class="tile-metric">29.9M views &nbsp;·&nbsp; £531K+ EMV</p>
+          </div>
+        </div>
+
+        <!-- Tile 2: UGC Elvie -->
+        <div class="project-tile" onclick="openModal('modal-2')" role="button" tabindex="0">
+          <div class="tile-image">
+            <img src="https://img.youtube.com/vi/1EnBlV51tFk/maxresdefault.jpg"
+                 onerror="this.src='https://img.youtube.com/vi/1EnBlV51tFk/hqdefault.jpg'"
+                 alt="Elvie UGC Programme">
+            <div class="tile-overlay"><span>View Project</span></div>
+          </div>
+          <div class="tile-info">
+            <span class="tile-brand">Elvie</span>
+            <h3 class="tile-title">UGC Programme</h3>
+            <p class="tile-metric">6.5M views &nbsp;·&nbsp; £0.01 per view</p>
+          </div>
+        </div>
+
+        <!-- Tile 3: CoppaFeel! Priority Group -->
+        <div class="project-tile" onclick="openModal('modal-3')" role="button" tabindex="0">
+          <div class="tile-image">
+            <img src="https://img.youtube.com/vi/tERVjx-JJdc/maxresdefault.jpg"
+                 onerror="this.src='https://img.youtube.com/vi/tERVjx-JJdc/hqdefault.jpg'"
+                 alt="CoppaFeel! Priority Group Campaign">
+            <div class="tile-overlay"><span>View Project</span></div>
+          </div>
+          <div class="tile-info">
+            <span class="tile-brand">CoppaFeel!</span>
+            <h3 class="tile-title">Creator Campaign — Priority Group</h3>
+            <p class="tile-metric">3.9M reach &nbsp;·&nbsp; 9.1M TikTok impressions</p>
+          </div>
+        </div>
+
+        <!-- Tile 4: Sex & Intimacy (Elvie) -->
+        <div class="project-tile" onclick="openModal('modal-4')" role="button" tabindex="0">
+          <div class="tile-image">
+            <img src="https://img.youtube.com/vi/arQbikfc-Ko/maxresdefault.jpg"
+                 onerror="this.src='https://img.youtube.com/vi/arQbikfc-Ko/hqdefault.jpg'"
+                 alt="Sex & Intimacy After Birth — Elvie">
+            <div class="tile-overlay"><span>View Project</span></div>
+          </div>
+          <div class="tile-info">
+            <span class="tile-brand">Elvie</span>
+            <h3 class="tile-title">Creative Strategy — Sex &amp; Intimacy After Birth</h3>
+            <p class="tile-metric">613K reach &nbsp;·&nbsp; 1M+ video views</p>
+          </div>
+        </div>
+
+        <!-- Tile 5: Content Strategy Elvie (full-width) -->
+        <div class="project-tile tile-wide" onclick="openModal('modal-5')" role="button" tabindex="0">
+          <div class="tile-image">
+            <img src="assets/images/elvie-breastmilk.jpg" alt="Content Strategy — Elvie">
+            <div class="tile-overlay"><span>View Project</span></div>
+          </div>
+          <div class="tile-info tile-info-wide">
+            <span class="tile-brand">Elvie</span>
+            <h3 class="tile-title">Content Strategy</h3>
+            <p class="tile-metric">+345% YoY blog sessions from organic social</p>
+            <p class="tile-desc">Cross-channel content strategy connecting social, blog, and email to drive educational content performance.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="section-inner about-inner">
+      <div class="about-text">
+        <h2>About</h2>
+        <p>I work with brands to develop creator-led campaigns rooted in audience understanding, creative trust, and platform-native storytelling — balancing cultural resonance with commercial performance.</p>
+        <p>Over the last 5+ years, I've worked across fast-growing tech and health brands including Elvie, CoppaFeel!, and Dojo — developing creator-led campaigns designed to feel native to audiences and platforms.</p>
+        <p>A lot of my work sits in areas where messaging needs to be handled carefully, particularly across health, behaviour change, and underrepresented audiences. Because the challenge isn't just getting attention. It's building campaigns people trust.</p>
+        <p class="about-availability">Open to freelance projects and retainers with UK and European brands.</p>
+      </div>
+      <div class="about-skills">
+        <h3>Skills</h3>
+        <ul class="skills-list">
+          <li>Creator &amp; Influencer Strategy</li>
+          <li>Campaign &amp; Creative Strategy</li>
+          <li>Content Strategy</li>
+          <li>Audience Insight &amp; Research</li>
+          <li>Paid Social — TikTok &amp; Meta</li>
+          <li>UGC Programme Management</li>
+          <li>Platform-Native Storytelling</li>
+          <li>Performance Reporting &amp; Optimisation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="section-inner contact-inner">
+      <h2>Get in touch</h2>
+      <p>Open to freelance projects and retainers with UK and European brands.</p>
+      <div class="contact-links">
+        <a href="mailto:charlieharlow1@gmail.com" class="contact-link contact-primary">charlieharlow1@gmail.com</a>
+        <a href="https://www.linkedin.com/in/charlie-harlow" target="_blank" rel="noopener" class="contact-link contact-secondary">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p>© 2026 Charlie Harlow</p>
+  </footer>
+
+  <!-- ===================== OVERLAY ===================== -->
+  <div id="modal-overlay" onclick="closeAllModals()"></div>
+
+  <!-- =================== MODAL 1: CoppaFeel! Feelings =================== -->
+  <div id="modal-1" class="modal" role="dialog" aria-modal="true" aria-label="CoppaFeel! Feelings Campaign">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeModal('modal-1')" aria-label="Close">✕</button>
+
+      <div class="modal-header">
+        <span class="modal-brand">CoppaFeel!</span>
+        <h2>Creator Programme — "Feelings" Annual Campaign</h2>
+        <p class="modal-overview">Scaled CoppaFeel!'s creator programme in-house, establishing it as a core channel for the annual campaign.</p>
+      </div>
+
+      <div class="metrics-bar">
+        <div class="metric"><span class="metric-value">29.9M</span><span class="metric-label">Views</span></div>
+        <div class="metric"><span class="metric-value">4.97M</span><span class="metric-label">Reach</span></div>
+        <div class="metric"><span class="metric-value">£531K+</span><span class="metric-label">EMV</span></div>
+        <div class="metric"><span class="metric-value">~£5.3</span><span class="metric-label">EMV per £1 spent</span></div>
+        <div class="metric"><span class="metric-value">122K+</span><span class="metric-label">Engagements (1.66% ER)</span></div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4>Context</h4>
+          <p>The charity's key awareness moment required storytelling to drive early detection behaviours. The creator programme had previously been managed externally, limiting integration and efficiency.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Role</h4>
+          <p>Led the creator programme end-to-end, including strategy, creator sourcing, briefing, relationship management, paid amplification, and performance tracking.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Approach</h4>
+          <ul>
+            <li>Brought the programme in-house to improve speed, integration, and cost efficiency</li>
+            <li>Partnered with creators aligned to 18–24 audiences</li>
+            <li>Delivered creator-led, platform-native storytelling</li>
+            <li>Executed across TikTok and Instagram with paid amplification</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4>Why this matters</h4>
+          <p>Established creators as a core campaign channel, delivering scale, cultural relevance, and improved efficiency.</p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Content</h4>
+          <div class="video-grid vertical">
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.tiktok.com/embed/v2/7507300578721008918"
+                  allowfullscreen allow="encrypted-media;" scrolling="no"></iframe>
+              </div>
+              <p class="creator-credit">Creator: @diaryroom</p>
+            </div>
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.tiktok.com/embed/v2/7507256591377255702"
+                  allowfullscreen allow="encrypted-media;" scrolling="no"></iframe>
+              </div>
+              <p class="creator-credit">Creator: @twinsum</p>
+            </div>
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.tiktok.com/embed/v2/7556650549991722243"
+                  allowfullscreen allow="encrypted-media;" scrolling="no"></iframe>
+              </div>
+              <p class="creator-credit">Creator: @kareenajethwa</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-section recommendation">
+          <blockquote>
+            <p>"Charlie is a joy to work with; interesting, curious, and fun. She has been integral to evolving how we work with creators at CoppaFeel!, reducing agency support and bringing relationship management in house, delivering authentic partnerships and enhanced ROI for the charity. Charlie is also a valued member of the core team that delivers CoppaFeel!'s annual campaign, ensuring it's diverse, embedded in youth culture and resonates with the audiences we serve."</p>
+            <cite>Martine O'Donnell — Marketing Director, CoppaFeel!</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== MODAL 2: UGC Elvie =================== -->
+  <div id="modal-2" class="modal" role="dialog" aria-modal="true" aria-label="UGC Programme — Elvie">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeModal('modal-2')" aria-label="Close">✕</button>
+
+      <div class="modal-header">
+        <span class="modal-brand">Elvie</span>
+        <h2>UGC Programme</h2>
+        <p class="modal-overview">Built and scaled a cost-efficient UGC programme to fuel organic social, paid social and product launches.</p>
+      </div>
+
+      <div class="metrics-bar">
+        <div class="metric"><span class="metric-value">10+</span><span class="metric-label">Creators</span></div>
+        <div class="metric"><span class="metric-value">100+</span><span class="metric-label">Videos produced</span></div>
+        <div class="metric"><span class="metric-value">6.5M</span><span class="metric-label">Views</span></div>
+        <div class="metric"><span class="metric-value">£0.01</span><span class="metric-label">Per view</span></div>
+        <div class="metric"><span class="metric-value">3× under</span><span class="metric-label">Cost target</span></div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4>Context</h4>
+          <p>Existing production models were too slow and expensive to meet the demands of short-form content.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Role</h4>
+          <p>Led strategy, built a creator network, and managed relationships over 1–2 years.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Approach</h4>
+          <ul>
+            <li>Shifted to scalable short-form video production</li>
+            <li>Built and trained a network of early-stage creators</li>
+            <li>Developed a repeatable, trend-led content model</li>
+            <li>Delivered reactive, platform-aligned content</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4>Why this matters</h4>
+          <p>Created a scalable, cost-efficient content engine aligned to platform behaviour and performance goals — exceeding the 2.2M view target (at £0.03/view) with 6.5M views at £0.01/view.</p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Content</h4>
+          <div class="video-grid vertical">
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.youtube.com/embed/1EnBlV51tFk"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="creator-credit">Creator: @morganbutlerblog</p>
+            </div>
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.youtube.com/embed/gZ3dTySvadk"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="creator-credit">Creator: @nicole_moses</p>
+            </div>
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.youtube.com/embed/7nep1nEzHBE"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="creator-credit">Creator: @aratakyiesq</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-section recommendation">
+          <blockquote>
+            <p>"Charlie is an incredibly smart, tenacious and curious professional who from the get-go instinctively 'got' how to develop a brand's social media and has shown a real flair for initiating and developing disruptive and effective creative content. She is an absolute star and an absolute pleasure to work with."</p>
+            <cite>Gemma Buggins — Global Marketing Director, Elvie</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== MODAL 3: CoppaFeel! Priority Group =================== -->
+  <div id="modal-3" class="modal" role="dialog" aria-modal="true" aria-label="CoppaFeel! Priority Group Campaign">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeModal('modal-3')" aria-label="Close">✕</button>
+
+      <div class="modal-header">
+        <span class="modal-brand">CoppaFeel!</span>
+        <h2>Creator Campaign — Priority Group</h2>
+        <p class="modal-overview">Led a targeted creator campaign engaging South Asian audiences with culturally relevant breast health messaging, shaped through audience focus groups.</p>
+      </div>
+
+      <div class="metrics-bar">
+        <div class="metric"><span class="metric-value">3.9M</span><span class="metric-label">Deduplicated paid reach</span></div>
+        <div class="metric"><span class="metric-value">9.1M</span><span class="metric-label">TikTok impressions</span></div>
+        <div class="metric"><span class="metric-value">£1.10</span><span class="metric-label">TikTok CPM</span></div>
+        <div class="metric"><span class="metric-value">1.48M</span><span class="metric-label">Meta impressions</span></div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4>Context</h4>
+          <p>Research identified lower awareness and levels of life-saving self-checking behaviour due to cultural barriers, lack of representation, and limited access to relevant information.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Role</h4>
+          <p>Owned strategy, creator management, and paid social execution end-to-end.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Approach</h4>
+          <ul>
+            <li>Developed a research-led campaign brief shaped through audience focus groups</li>
+            <li>Built a structured three-part content series (awareness to action)</li>
+            <li>Partnered with culturally aligned creators</li>
+            <li>Delivered targeted paid campaigns across TikTok and Meta</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4>Audience response</h4>
+          <div class="comments-block">
+            <p class="comment">"So important, love this Nish 🖤🖤🖤🖤"</p>
+            <p class="comment">"So many people need to hear this!"</p>
+            <p class="comment">"An amazing video and even more amazing reminder 👏🏽👏🏽👏🏽"</p>
+          </div>
+        </div>
+        <div class="modal-section">
+          <h4>Why this matters</h4>
+          <p>Demonstrated how culturally specific, insight-led campaigns can drive engagement and reach underrepresented audiences.</p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Content</h4>
+          <div class="video-grid vertical">
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.tiktok.com/embed/v2/7581904149646740758"
+                  allowfullscreen allow="encrypted-media;" scrolling="no"></iframe>
+              </div>
+              <p class="creator-credit">Creator: @nishahmedd</p>
+            </div>
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.tiktok.com/embed/v2/7582647602764598550"
+                  allowfullscreen allow="encrypted-media;" scrolling="no"></iframe>
+              </div>
+              <p class="creator-credit">Creator: @nishahmedd</p>
+            </div>
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.youtube.com/embed/KBH0EU0sV58"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="creator-credit">Creator: @iconicakes</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-section recommendation">
+          <blockquote>
+            <p>"Charlie is committed to equity, diversity and inclusion. She led an impactful project engaging a South Asian community with health messaging, incorporating focus groups to ensure the work was relevant, respectful and effective. She also independently developed expertise in paid media, particularly across TikTok and Instagram, using a test-and-learn approach to optimise performance. Her reporting is consistently reliable and she has a strong grasp of objectives and measurement."</p>
+            <cite>Eleanor Sethi — Head of Marketing, CoppaFeel!</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== MODAL 4: Sex & Intimacy After Birth =================== -->
+  <div id="modal-4" class="modal" role="dialog" aria-modal="true" aria-label="Sex & Intimacy After Birth — Elvie">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeModal('modal-4')" aria-label="Close">✕</button>
+
+      <div class="modal-header">
+        <span class="modal-brand">Elvie</span>
+        <h2>Creative Strategy — Sex &amp; Intimacy After Birth</h2>
+        <p class="modal-overview">Led a digital campaign establishing postpartum sexual wellbeing as a new content pillar for the brand.</p>
+      </div>
+
+      <div class="metrics-bar">
+        <div class="metric"><span class="metric-value">613K</span><span class="metric-label">Organic reach (vs. 500K target)</span></div>
+        <div class="metric"><span class="metric-value">1.7%</span><span class="metric-label">Instagram ER (vs. 1.3% target)</span></div>
+        <div class="metric"><span class="metric-value">2%</span><span class="metric-label">Email CTR (vs. 1.5% target)</span></div>
+        <div class="metric"><span class="metric-value">1M+</span><span class="metric-label">Video views</span></div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4>Context</h4>
+          <p>The brand aimed to expand into a sensitive, underrepresented topic requiring a credible and insight-led approach.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Role</h4>
+          <p>Owned strategy, research, execution, and reporting end-to-end.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Approach</h4>
+          <ul>
+            <li>Identified opportunity through social listening and data analysis</li>
+            <li>Conducted academic and qualitative research to define audience challenges and content direction</li>
+            <li>Developed a multi-channel strategy across social, email, and editorial</li>
+            <li>Partnership with Hannah Witton across Instagram and YouTube</li>
+            <li>Integration of authentic creator-led storytelling from the UGC programme</li>
+            <li>Led stakeholder alignment and delivery</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4>Why this matters</h4>
+          <p>Expanded brand positioning through insight-driven and culturally sensitive strategy. Campaign messaging framework adopted as a core ongoing content pillar.</p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Content</h4>
+          <!-- Main YouTube video -->
+          <div class="video-wrap horizontal-wrap" style="margin-bottom: 24px;">
+            <iframe class="youtube-wide" src="https://www.youtube.com/embed/arQbikfc-Ko"
+              allowfullscreen></iframe>
+            <p class="creator-credit">Creator: @hannahwitton — In partnership with Hannah Witton</p>
+          </div>
+          <!-- Shorts -->
+          <div class="video-grid vertical">
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.youtube.com/embed/n1RcF8WsAFM"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="creator-credit">Creator: @hannahwitton</p>
+            </div>
+            <div class="video-wrap">
+              <div class="tiktok-container">
+                <iframe src="https://www.youtube.com/embed/mTpK3cq24CU"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="creator-credit">Creator: @_caliryan</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Campaign imagery</h4>
+          <div class="modal-images">
+            <img src="assets/images/elvie-sex-infographic.jpg" alt="What the F is up with Sex After Giving Birth — Elvie infographic">
+          </div>
+        </div>
+
+        <div class="modal-section recommendation">
+          <blockquote>
+            <p>"I had the pleasure of working alongside Charlie at Elvie, where she was pivotal in our content marketing efforts. Charlie has a knack for collaboration and a great ability to rally teams behind campaigns. She always wrote clear and concise creative briefs, ensuring that every project aligned with our brand vision and objectives and setting the stage for success."</p>
+            <cite>Catalina Costa — Senior Creative Designer, CoppaFeel!</cite>
+          </blockquote>
+        </div>
+        <div class="modal-section recommendation">
+          <blockquote>
+            <p>"Charlie is smart, proactive and an incredibly strong communicator. She is a naturally strategic thinker and is highly skilled at translating complex data sources into actionable customer insights. She is also well liked by everyone she works with. Any business is lucky to have her as a part of their team."</p>
+            <cite>Mimi Williams — Global Senior Brand Manager, Elvie</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== MODAL 5: Content Strategy Elvie =================== -->
+  <div id="modal-5" class="modal" role="dialog" aria-modal="true" aria-label="Content Strategy — Elvie">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeModal('modal-5')" aria-label="Close">✕</button>
+
+      <div class="modal-header">
+        <span class="modal-brand">Elvie</span>
+        <h2>Content Strategy</h2>
+        <p class="modal-overview">Developed a cross-channel content strategy using educational social content to drive audiences towards long-form blog content.</p>
+      </div>
+
+      <div class="metrics-bar">
+        <div class="metric"><span class="metric-value">+345%</span><span class="metric-label">YoY blog sessions from organic social</span></div>
+        <div class="metric"><span class="metric-value">2×</span><span class="metric-label">Exceeded growth target (200%)</span></div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4>Context</h4>
+          <p>Existing blog, social, and email content operated separately, limiting reach and reducing the impact of educational content.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Role</h4>
+          <p>Led the development of a more connected content approach across social, blog, and email channels.</p>
+        </div>
+        <div class="modal-section">
+          <h4>Approach</h4>
+          <ul>
+            <li>Repurposed existing blog content into educational social media content</li>
+            <li>Built integrated content plans across blog, email, and social</li>
+            <li>Developed clearer reporting across channels</li>
+            <li>Used social content to drive traffic towards long-form educational articles</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4>Why this matters</h4>
+          <p>Improved the visibility and performance of educational content by creating a more connected cross-channel strategy.</p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Content examples</h4>
+          <div class="modal-images">
+            <img src="assets/images/elvie-breastmilk.jpg" alt="Your Breast Milk Knows When Baby Is Sick — Elvie educational content">
+            <img src="assets/images/elvie-breastfeeding.jpg" alt="The Brilliant Benefits of Breastfeeding — Elvie educational content">
+          </div>
+          <a href="https://global.elvie.com/en-gb/guides/breastfeeding-nursing/the-advantages-of-breastfeeding-your-baby"
+             target="_blank" rel="noopener" class="blog-link">
+            View example blog article →
+          </a>
+        </div>
+
+        <div class="modal-section recommendation">
+          <blockquote>
+            <p>"I had the pleasure of managing Charlie in 2023 and I was continually impressed by her decision-making abilities, her understanding of audience and brand, and her mix of creative and analytical thinking. Her approach to wider content strategy shows a very high level of insight. Charlie is proactive and eager to learn, and she's a genuinely lovely person to work with."</p>
+            <cite>Hannah Hughes — Content &amp; Community Lead, CoppaFeel!</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1584">
+  <title>Charlie Harlow — LinkedIn Banner (1584×396)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 1584px;
+      height: 396px;
+      overflow: hidden;
+      background: #F8F5EE;
+      font-family: 'DM Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .banner {
+      width: 1584px;
+      height: 396px;
+      background: #F8F5EE;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Sage accent blocks */
+    .block-left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      background: #7D9B76;
+    }
+
+    .block-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #EAF0E7;
+    }
+
+    .block-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #EAF0E7;
+    }
+
+    /* Large background text */
+    .bg-text {
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'DM Serif Display', serif;
+      font-size: 240px;
+      color: rgba(125, 155, 118, 0.07);
+      white-space: nowrap;
+      pointer-events: none;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    /* Decorative circle */
+    .circle {
+      position: absolute;
+      right: 260px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      border: 1px solid rgba(125, 155, 118, 0.18);
+    }
+
+    .circle-inner {
+      position: absolute;
+      right: 340px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgba(125, 155, 118, 0.06);
+    }
+
+    /* Main content */
+    .content {
+      position: relative;
+      z-index: 10;
+      padding: 0 80px 0 72px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 0;
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #7D9B76;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 80px;
+      line-height: 1.0;
+      color: #1C1C1C;
+      margin-bottom: 22px;
+      letter-spacing: -0.01em;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #7A7A7A;
+      font-style: italic;
+      line-height: 1.6;
+      max-width: 560px;
+      border-left: 3px solid #7D9B76;
+      padding-left: 18px;
+    }
+
+    /* Right side: skills / pillars */
+    .right {
+      width: 380px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding-left: 80px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 9px 20px;
+      background: #EAF0E7;
+      font-size: 13px;
+      font-weight: 500;
+      color: #5C7A55;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #B8CCAD;
+      margin: 4px 0;
+    }
+
+    /* URL / contact line */
+    .url-line {
+      position: absolute;
+      bottom: 26px;
+      right: 72px;
+      font-size: 12px;
+      color: #B8CCAD;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="block-left"></div>
+    <div class="block-top"></div>
+    <div class="block-bottom"></div>
+    <div class="bg-text">CH</div>
+    <div class="circle"></div>
+    <div class="circle-inner"></div>
+
+    <div class="content">
+      <div class="left">
+        <p class="label">Marketing Strategist</p>
+        <h1>Charlie<br>Harlow</h1>
+        <p class="tagline">Creator &amp; creative strategy — building campaigns<br>that resonate culturally and perform commercially.</p>
+      </div>
+      <div class="right">
+        <span class="pill">Creator &amp; Influencer Strategy</span>
+        <div class="divider"></div>
+        <span class="pill">Campaign &amp; Creative Strategy</span>
+        <div class="divider"></div>
+        <span class="pill">Paid Social — TikTok &amp; Meta</span>
+        <div class="divider"></div>
+        <span class="pill">UGC Programme Management</span>
+      </div>
+    </div>
+
+    <p class="url-line">charlieharlow.co.uk</p>
+  </div>
+</body>
+</html>
