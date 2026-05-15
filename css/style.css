@@ -734,7 +734,6 @@ footer p {
   max-width: 140px;
   display: block;
   object-fit: contain;
-  mix-blend-mode: multiply;
   opacity: 0.9;
 }
 
