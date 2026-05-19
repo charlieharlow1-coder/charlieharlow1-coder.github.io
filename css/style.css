@@ -798,6 +798,40 @@ footer p {
   line-height: 1.4;
 }
 
+/* Tooltip for metric labels with data-tooltip attribute */
+.metric-label[data-tooltip] {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--sage-mid);
+  cursor: default;
+}
+
+.metric-label[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dark);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.metric-label[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
 /* Modal body sections */
 .modal-body {
   display: flex;
