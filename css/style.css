@@ -789,6 +789,11 @@ footer p {
   line-height: 1.1;
 }
 
+/* Scale down longer metric values so they don't break the bar */
+.metric-value[style*="white-space:nowrap"] {
+  font-size: 1.1rem;
+}
+
 .metric-label {
   display: block;
   font-size: 0.65rem;
