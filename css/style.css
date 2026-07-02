@@ -372,11 +372,6 @@ a {
   color: var(--light);
 }
 
-/* Tile 4 — spans 2 columns */
-.project-tile:nth-child(4) {
-  grid-column: span 2;
-}
-
 /* Tile 5 — spans 1 column, standard layout */
 .tile-wide {
   grid-column: span 1;
@@ -1046,7 +1041,6 @@ footer p {
 
   #work { padding: 80px 32px; }
   .project-grid { grid-template-columns: repeat(2, 1fr); }
-  .project-tile:nth-child(4) { grid-column: span 1; }
   .tile-wide { grid-column: span 1; }
 
   #about { padding: 80px 32px; }
@@ -1077,7 +1071,6 @@ footer p {
 
   #work { padding: 40px 20px 60px; }
   .project-grid { grid-template-columns: 1fr; }
-  .project-tile:nth-child(4) { grid-column: span 1; }
   .tile-wide { grid-column: span 1; }
   .tile-info-wide { padding: 24px !important; }
   .tile-info-wide .tile-title { font-size: 1.1rem; }
