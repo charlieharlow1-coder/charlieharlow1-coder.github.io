@@ -135,8 +135,8 @@ a {
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
   align-items: center;
 }
 
@@ -240,6 +240,12 @@ a {
 .hero-work-thumb:hover img {
   transform: scale(1.08);
   filter: grayscale(0%);
+}
+
+.hero-work-thumb--logo img {
+  object-fit: contain;
+  background: var(--cream-dark);
+  padding: 8px;
 }
 
 /* Scroll indicator */
