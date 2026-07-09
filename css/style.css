@@ -409,6 +409,24 @@ a {
   color: var(--light);
 }
 
+.tile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.tile-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--sage-dark);
+  background: var(--sage-light);
+  padding: 4px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+}
+
 /* Tile 5 — spans 1 column, standard layout */
 .tile-wide {
   grid-column: span 1;
