@@ -413,16 +413,17 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 12px;
+  margin: 10px 0;
 }
 
 .tile-tag {
   display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--sage-dark);
-  background: var(--sage-light);
-  padding: 4px 10px;
+  font-size: 0.66rem;
+  font-weight: 500;
+  color: var(--mid);
+  background: transparent;
+  border: 1px solid var(--sage-mid);
+  padding: 3px 9px;
   border-radius: 100px;
   letter-spacing: 0.02em;
 }
