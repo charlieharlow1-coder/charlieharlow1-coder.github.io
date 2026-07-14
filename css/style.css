@@ -19,6 +19,7 @@
   --sun-dark:    #B85C22;
   --gold:        #F0A93C;
   --dark:        #1C1C1C;
+  --dark-warm:   #2A1F16;
   --mid:         #5A5A5A;
   --light:       #9A9A9A;
   --white:       #FFFFFF;
@@ -210,32 +211,13 @@ a {
 }
 
 .hero-image {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
 }
 
-/* Sunburst motif, echoes the LinkedIn banner — kept subtle so it reads as texture, not decoration */
-.hero-image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 340px;
-  height: 340px;
-  transform: translate(-50%, -12%);
-  background: repeating-conic-gradient(var(--gold) 0deg 3deg, transparent 3deg 18deg);
-  opacity: 0.3;
-  border-radius: 50%;
-  z-index: 0;
-  pointer-events: none;
-}
-
 .hero-image img {
-  position: relative;
-  z-index: 1;
   width: 100%;
   max-width: 240px;
   aspect-ratio: 4 / 5;
@@ -352,9 +334,10 @@ a {
 
 /* Standard tile */
 .project-tile {
+  position: relative;
   cursor: pointer;
   background: var(--white);
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid var(--sun-light);
   border-top: 3px solid transparent;
   transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -363,11 +346,32 @@ a {
   outline: none;
 }
 
+/* Sunburst motif, echoes the LinkedIn banner — peeks out from behind the card on hover */
+.project-tile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(100% + 40px);
+  height: 260px;
+  transform: translate(-50%, -8%);
+  background: repeating-conic-gradient(var(--gold) 0deg 3deg, transparent 3deg 18deg);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
 .project-tile:hover,
 .project-tile:focus {
   transform: translateY(-6px);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
   border-top-color: var(--sun);
+}
+
+.project-tile:hover::before,
+.project-tile:focus::before {
+  opacity: 0.45;
 }
 
 .tile-image {
@@ -633,7 +637,7 @@ a {
    ============================================================ */
 #contact {
   padding: 100px 48px;
-  background: var(--dark);
+  background: var(--dark-warm);
   text-align: center;
 }
 
@@ -696,8 +700,8 @@ a {
    ============================================================ */
 footer {
   padding: 24px 48px;
-  background: var(--dark);
-  border-top: 1px solid #2a2a2a;
+  background: var(--dark-warm);
+  border-top: 1px solid #3c2e20;
   text-align: center;
 }
 
@@ -1123,7 +1127,6 @@ footer p {
   }
   .hero-image { order: -1; margin: 0 auto; }
   .hero-image img { max-width: 220px; margin: 0 auto; }
-  .hero-image::before { width: 320px; height: 320px; }
   .hero-work-preview { margin: 0 auto; }
   .hero-tagline { margin-left: auto; margin-right: auto; }
   .hero-sub { padding-left: 0; }
