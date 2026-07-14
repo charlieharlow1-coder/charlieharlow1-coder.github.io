@@ -1,6 +1,6 @@
 /* ============================================================
    CHARLIE HARLOW PORTFOLIO — STYLESHEET
-   Sage & cream minimalist design
+   Sunshine & cream — warm minimalist design
    ============================================================ */
 
 /* ---- Reset & Base ---- */
@@ -11,12 +11,13 @@
 }
 
 :root {
-  --cream:       #F8F5EE;
-  --cream-dark:  #F0EBE0;
-  --sage:        #7D9B76;
-  --sage-light:  #EAF0E7;
-  --sage-mid:    #B8CCAD;
-  --sage-dark:   #5C7A55;
+  --cream:       #FBF6EC;
+  --cream-dark:  #F5EAD6;
+  --sun:         #E07B3A;
+  --sun-light:   #FBE9D2;
+  --sun-mid:     #F0C088;
+  --sun-dark:    #B85C22;
+  --gold:        #F0A93C;
   --dark:        #1C1C1C;
   --mid:         #5A5A5A;
   --light:       #9A9A9A;
@@ -82,6 +83,18 @@ a {
   color: var(--dark);
   text-decoration: none;
   letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--sun);
+  box-shadow: 0 0 0 3px var(--sun-light);
 }
 
 .nav-links {
@@ -102,18 +115,18 @@ a {
 }
 
 .nav-links a:hover {
-  color: var(--sage-dark);
+  color: var(--sun-dark);
 }
 
 .nav-cta {
   padding: 10px 22px !important;
-  background: var(--sage) !important;
+  background: var(--sun) !important;
   color: var(--white) !important;
   transition: background 0.2s !important;
 }
 
 .nav-cta:hover {
-  background: var(--sage-dark) !important;
+  background: var(--sun-dark) !important;
   color: var(--white) !important;
 }
 
@@ -127,7 +140,7 @@ a {
   justify-content: center;
   padding: 120px 48px 40px;
   position: relative;
-  background: radial-gradient(ellipse at 65% 50%, #F0E8D5 0%, var(--cream) 65%);
+  background: radial-gradient(ellipse at 65% 50%, #FBE4C3 0%, var(--cream) 65%);
 }
 
 .hero-content {
@@ -143,7 +156,7 @@ a {
 .hero-label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--sage);
+  color: var(--sun);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: 20px;
@@ -164,7 +177,7 @@ a {
   line-height: 1.75;
   color: var(--mid);
   font-style: italic;
-  border-left: 3px solid var(--sage);
+  border-left: 3px solid var(--sun);
   padding-left: 20px;
   margin-bottom: 20px;
   max-width: 520px;
@@ -193,24 +206,43 @@ a {
 }
 
 .hero-cta:hover {
-  background: var(--sage-dark);
+  background: var(--sun-dark);
 }
 
 .hero-image {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
 }
 
+/* Sunburst motif, echoes the LinkedIn banner — kept subtle so it reads as texture, not decoration */
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 340px;
+  height: 340px;
+  transform: translate(-50%, -12%);
+  background: repeating-conic-gradient(var(--gold) 0deg 3deg, transparent 3deg 18deg);
+  opacity: 0.3;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero-image img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 240px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: top center;
-  filter: grayscale(18%) brightness(1.02);
-  box-shadow: 0 0 0 6px var(--cream), 0 0 0 8px var(--sage-mid);
+  filter: grayscale(10%) brightness(1.02) saturate(1.05);
+  box-shadow: 0 0 0 6px var(--cream), 0 0 0 8px var(--sun-mid);
 }
 
 .hero-work-preview {
@@ -226,7 +258,7 @@ a {
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 2px;
-  box-shadow: 0 0 0 3px var(--cream), 0 0 0 4px var(--sage-mid);
+  box-shadow: 0 0 0 3px var(--cream), 0 0 0 4px var(--sun-mid);
 }
 
 .hero-work-thumb img {
@@ -271,7 +303,7 @@ a {
 .scroll-line {
   width: 1px;
   height: 28px;
-  background: var(--sage);
+  background: var(--sun);
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -323,7 +355,7 @@ a {
   cursor: pointer;
   background: var(--white);
   overflow: hidden;
-  border: 1px solid var(--sage-light);
+  border: 1px solid var(--sun-light);
   border-top: 3px solid transparent;
   transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               box-shadow 0.35s ease,
@@ -335,7 +367,7 @@ a {
 .project-tile:focus {
   transform: translateY(-6px);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
-  border-top-color: var(--sage);
+  border-top-color: var(--sun);
 }
 
 .tile-image {
@@ -378,7 +410,7 @@ a {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  background: rgba(92, 122, 85, 0.9);
+  background: rgba(184, 92, 34, 0.9);
   padding: 6px 14px;
 }
 
@@ -390,7 +422,7 @@ a {
   display: block;
   font-size: 0.7rem;
   font-weight: 600;
-  color: var(--sage);
+  color: var(--sun);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin-bottom: 8px;
@@ -422,7 +454,7 @@ a {
   font-weight: 500;
   color: var(--mid);
   background: transparent;
-  border: 1px solid var(--sage-mid);
+  border: 1px solid var(--sun-mid);
   padding: 3px 9px;
   border-radius: 100px;
   letter-spacing: 0.02em;
@@ -469,12 +501,12 @@ a {
 
 .rec-scroll::-webkit-scrollbar { height: 3px; }
 .rec-scroll::-webkit-scrollbar-track { background: var(--cream-dark); }
-.rec-scroll::-webkit-scrollbar-thumb { background: var(--sage-mid); border-radius: 2px; }
+.rec-scroll::-webkit-scrollbar-thumb { background: var(--sun-mid); border-radius: 2px; }
 
 .rec-card {
   flex: 0 0 360px;
   background: var(--cream);
-  border-left: 4px solid var(--sage);
+  border-left: 4px solid var(--sun);
   padding: 36px 32px;
   scroll-snap-align: start;
   display: flex;
@@ -502,7 +534,7 @@ a {
   flex-direction: column;
   gap: 4px;
   padding-top: 16px;
-  border-top: 1px solid var(--sage-light);
+  border-top: 1px solid var(--sun-light);
 }
 
 .rec-name {
@@ -513,7 +545,7 @@ a {
 
 .rec-role {
   font-size: 0.72rem;
-  color: var(--sage-dark);
+  color: var(--sun-dark);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -532,7 +564,7 @@ a {
    ============================================================ */
 #about {
   padding: 100px 48px;
-  background: var(--sage-light);
+  background: var(--sun-light);
 }
 
 .about-inner {
@@ -557,7 +589,7 @@ a {
 }
 
 .about-availability {
-  color: var(--sage-dark) !important;
+  color: var(--sun-dark) !important;
   font-weight: 500;
   margin-top: 12px !important;
 }
@@ -575,7 +607,7 @@ a {
 
 .skills-list li {
   padding: 13px 0;
-  border-bottom: 1px solid var(--sage-mid);
+  border-bottom: 1px solid var(--sun-mid);
   font-size: 0.88rem;
   color: var(--dark);
   display: flex;
@@ -592,7 +624,7 @@ a {
   display: inline-block;
   width: 18px;
   height: 1px;
-  background: var(--sage);
+  background: var(--sun);
   flex-shrink: 0;
 }
 
@@ -642,12 +674,12 @@ a {
 }
 
 .contact-primary {
-  background: var(--sage);
+  background: var(--sun);
   color: var(--white);
 }
 
 .contact-primary:hover {
-  background: var(--sage-dark);
+  background: var(--sun-dark);
 }
 
 .contact-secondary {
@@ -730,7 +762,7 @@ footer p {
 /* Scrollbar styling */
 .modal-inner::-webkit-scrollbar { width: 4px; }
 .modal-inner::-webkit-scrollbar-track { background: var(--cream-dark); }
-.modal-inner::-webkit-scrollbar-thumb { background: var(--sage-mid); }
+.modal-inner::-webkit-scrollbar-thumb { background: var(--sun-mid); }
 
 .modal-close {
   position: sticky;
@@ -765,7 +797,7 @@ footer p {
   display: block;
   font-size: 0.7rem;
   font-weight: 600;
-  color: var(--sage);
+  color: var(--sun);
   text-transform: uppercase;
   letter-spacing: 0.18em;
   margin-bottom: 14px;
@@ -793,7 +825,7 @@ footer p {
   color: var(--light);
   font-style: italic;
   line-height: 1.5;
-  border-left: 2px solid var(--sage-light);
+  border-left: 2px solid var(--sun-light);
   padding-left: 12px;
 }
 
@@ -815,7 +847,7 @@ footer p {
 .metrics-bar {
   display: flex;
   flex-wrap: wrap;
-  background: var(--sage-light);
+  background: var(--sun-light);
   margin-bottom: 48px;
 }
 
@@ -835,7 +867,7 @@ footer p {
   display: block;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.55rem;
-  color: var(--sage-dark);
+  color: var(--sun-dark);
   margin-bottom: 4px;
   line-height: 1.1;
 }
@@ -858,7 +890,7 @@ footer p {
 .metric-label[data-tooltip] {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted var(--sage-mid);
+  border-bottom: 1px dotted var(--sun-mid);
   cursor: default;
 }
 
@@ -898,7 +930,7 @@ footer p {
 .modal-section h4 {
   font-size: 0.68rem;
   font-weight: 700;
-  color: var(--sage);
+  color: var(--sun);
   text-transform: uppercase;
   letter-spacing: 0.18em;
   margin-bottom: 14px;
@@ -927,7 +959,7 @@ footer p {
   content: '–';
   position: absolute;
   left: 0;
-  color: var(--sage);
+  color: var(--sun);
 }
 
 /* Video grid */
@@ -946,7 +978,7 @@ footer p {
 
 .video-grid.vertical::-webkit-scrollbar { height: 3px; }
 .video-grid.vertical::-webkit-scrollbar-track { background: var(--cream-dark); }
-.video-grid.vertical::-webkit-scrollbar-thumb { background: var(--sage-mid); border-radius: 2px; }
+.video-grid.vertical::-webkit-scrollbar-thumb { background: var(--sun-mid); border-radius: 2px; }
 
 .video-wrap {
   display: flex;
@@ -997,13 +1029,13 @@ footer p {
 .series-label {
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--sage-dark);
+  color: var(--sun-dark);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 12px;
   margin-top: 28px;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--sage-light);
+  border-bottom: 1px solid var(--sun-light);
 }
 
 .series-label:first-of-type {
@@ -1026,7 +1058,7 @@ footer p {
 .blog-link {
   display: inline-block;
   font-size: 0.85rem;
-  color: var(--sage-dark);
+  color: var(--sun-dark);
   text-decoration: none;
   font-weight: 500;
   border-bottom: 1px solid currentColor;
@@ -1050,14 +1082,14 @@ footer p {
   color: var(--mid) !important;
   background: var(--white);
   padding: 10px 16px;
-  border-left: 2px solid var(--sage-mid);
+  border-left: 2px solid var(--sun-mid);
 }
 
 /* Recommendation */
 .recommendation {
-  background: var(--sage-light);
+  background: var(--sun-light);
   padding: 32px 36px;
-  border-left: 4px solid var(--sage);
+  border-left: 4px solid var(--sun);
 }
 
 .recommendation blockquote p {
@@ -1071,7 +1103,7 @@ footer p {
 .recommendation blockquote cite {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--sage-dark);
+  color: var(--sun-dark);
   font-style: normal;
   letter-spacing: 0.03em;
 }
@@ -1091,6 +1123,7 @@ footer p {
   }
   .hero-image { order: -1; margin: 0 auto; }
   .hero-image img { max-width: 220px; margin: 0 auto; }
+  .hero-image::before { width: 320px; height: 320px; }
   .hero-work-preview { margin: 0 auto; }
   .hero-tagline { margin-left: auto; margin-right: auto; }
   .hero-sub { padding-left: 0; }
