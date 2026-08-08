@@ -996,6 +996,7 @@ footer p {
 
 .metrics-note {
   margin-top: 0.75rem;
+  margin-bottom: 2.25rem;
   font-size: 0.72rem;
   font-style: italic;
   color: var(--light);
