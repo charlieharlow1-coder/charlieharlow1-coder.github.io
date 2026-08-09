@@ -42,6 +42,25 @@ function closeAllModals() {
   document.body.style.overflow = '';
 }
 
+// ---- Deep linking for case study modals ----
+const modalSlugs = {
+  'creator-programme': 'modal-1',
+  'ugc-programme': 'modal-2',
+  'south-asian-campaign': 'modal-3',
+  'sex-and-intimacy': 'modal-4',
+  'content-strategy': 'modal-5',
+  'brand-governance': 'modal-6'
+};
+
+function openModalFromHash() {
+  const slug = window.location.hash.slice(1);
+  const modalId = modalSlugs[slug];
+  if (modalId) openModal(modalId);
+}
+
+document.addEventListener('DOMContentLoaded', openModalFromHash);
+window.addEventListener('hashchange', openModalFromHash);
+
 // ---- Keyboard: Escape to close ----
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') closeAllModals();
