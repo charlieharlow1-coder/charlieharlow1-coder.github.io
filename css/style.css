@@ -1267,7 +1267,8 @@ footer p {
   #nav { padding: 16px 20px; }
   #nav.scrolled { padding: 12px 20px; }
   .nav-links { gap: 16px; }
-  .nav-links li:first-child { display: none; }
+  .nav-links li:first-child,
+  .nav-links li:nth-child(2) { display: none; }
 
   #hero { padding: 90px 20px 24px; }
   .hero-text h1 { font-size: 3rem; }
