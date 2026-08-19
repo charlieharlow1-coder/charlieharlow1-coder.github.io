@@ -263,7 +263,7 @@ a {
    PROOF STRIP & LOGO STRIP
    ============================================================ */
 #proof {
-  padding: 3.5rem 48px 1rem;
+  padding: 2rem 48px 0.75rem;
 }
 
 .proof-grid {
@@ -275,13 +275,13 @@ a {
 
 .proof-item {
   border-top: 1px solid var(--sage-mid);
-  padding-top: 1rem;
+  padding-top: 0.65rem;
 }
 
 .proof-value {
   display: block;
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-size: clamp(1.8rem, 3.6vw, 2.5rem);
   line-height: 1;
   font-weight: 500;
   color: var(--sage-dark);
@@ -289,16 +289,16 @@ a {
 
 .proof-label {
   display: block;
-  margin-top: 0.6rem;
-  font-size: 0.82rem;
-  line-height: 1.45;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
   color: var(--mid);
   max-width: 22ch;
 }
 
 .proof-note {
-  margin-top: 1.6rem;
-  font-size: 0.74rem;
+  margin-top: 0.9rem;
+  font-size: 0.72rem;
   font-style: italic;
   color: var(--light);
 }
